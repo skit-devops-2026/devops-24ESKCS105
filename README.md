@@ -1,4 +1,4 @@
-# <Project Name>
+# <skill swifify>
 
 > Replace every angle-bracket placeholder below. The hygiene check in CI will
 > fail until you do.
@@ -7,7 +7,7 @@
 
 | Roll No. | Name | GitHub username |
 |---|---|---|
-| <roll> | <name> | <username> |
+| <24ESKCS105> | <deepak swami> | <b240962-ctrl> |
 
 ## About
 
@@ -15,7 +15,7 @@
 
 ## Tech stack
 
-- Frontend: <e.g. React>
+- Frontend: <html,css,javascript>
 - Backend: <e.g. Node.js / Express>
 - Database: <e.g. PostgreSQL>
 
