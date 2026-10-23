@@ -1,0 +1,15 @@
+# Render Blueprint — Skill Swapify backend (one-click deploy)
+#
+# Add this file to the repo root, then in Render: New → Blueprint → connect
+# the repo skit-devops-2026/devops-24ESKCS105. Render builds the service
+# from the root Dockerfile (backend) and starts it on the platform PORT.
+services:
+  - type: web
+    name: skillswapify-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
