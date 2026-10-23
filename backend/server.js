@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
     name: 'Skill Swapify API',
     status: 'running',
     commit: COMMIT_SHA,
-    endpoints: ['/health', '/metrics'],
+    endpoints: ['/health', '/metrics', '/api/skills'],
   });
 });
 
@@ -49,6 +49,21 @@ app.get('/health', (req, res) => {
     uptime: process.uptime(),
     timestamp: new Date().toISOString(),
   });
+});
+
+
+// Sample skill-exchange listings used by the frontend skills board.
+const SKILLS = [
+  { name: 'Aarav', offers: 'Guitar', wants: 'Python programming' },
+  { name: 'Meera', offers: 'Photography', wants: 'Public speaking' },
+  { name: 'Kabir', offers: 'Video editing', wants: 'Guitar' },
+  { name: 'Sana', offers: 'French', wants: 'Data analysis' },
+  { name: 'Rohan', offers: 'Cooking', wants: 'Photography' },
+  { name: 'Isha', offers: 'Data analysis', wants: 'French' },
+];
+
+app.get('/api/skills', (req, res) => {
+  res.json({ count: SKILLS.length, skills: SKILLS });
 });
 
 app.get('/metrics', async (req, res) => {
