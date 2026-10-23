@@ -1,5 +1,7 @@
 # skill swapify
 
+![CI](https://github.com/skit-devops-2026/devops-24ESKCS105/actions/workflows/ci.yml/badge.svg)
+
 ## Author
 
 | Roll No. | Name | GitHub username |
@@ -58,6 +60,18 @@ https://skit-devops-2026.github.io/devops-24ESKCS105/
 Frontend is deployed to GitHub Pages by the CI workflow. The backend is
 deployed from the root Dockerfile (see `docs/deployment.md` for the Render
 steps).
+
+
+## Development workflow
+
+Work happens on short-lived branches, never directly on `main`:
+
+1. Create a branch: `feature/<short-name>`, `docs/<short-name>` or `fix/<short-name>`.
+2. Commit with a descriptive message (what changed and why, not "update" or "fix").
+3. Open a pull request into `main` **with a description** of the change and how it was tested.
+4. Wait for the CI workflow to go green, then merge the pull request.
+
+See `CONTRIBUTING.md` for the full guide.
 
 ## Health endpoint
 
