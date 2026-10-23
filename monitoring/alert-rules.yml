@@ -1,0 +1,18 @@
+groups:
+  - name: skillswapify-alerts
+    rules:
+      - alert: BackendDown
+        expr: up{job="skillswapify-backend"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Skill Swapify backend is down"
+          description: "Prometheus has not been able to scrape the backend for 1 minute."
+      - alert: HighErrorRate
+        expr: sum(rate(skillswapify_http_requests_total{status=~"5.."}[5m])) > 0.05
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High 5xx error rate on Skill Swapify backend"

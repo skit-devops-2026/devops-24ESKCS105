@@ -1,0 +1,22 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - "alert-rules.yml"
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "skillswapify-backend"
+    metrics_path: /metrics
+    scrape_interval: 15s
+    static_configs:
+      # Target used inside docker-compose / Kubernetes.
+      # For a local (non-Docker) run, change this to "localhost:3000".
+      - targets: ["backend:3000"]
+        labels:
+          app: skillswapify
+          service: backend

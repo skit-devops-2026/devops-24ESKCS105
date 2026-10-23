@@ -1,0 +1,60 @@
+# HELP skillswapify_process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE skillswapify_process_cpu_user_seconds_total counter
+skillswapify_process_cpu_user_seconds_total 0.031727
+
+# HELP skillswapify_process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE skillswapify_process_cpu_system_seconds_total counter
+skillswapify_process_cpu_system_seconds_total 0.002372
+
+# HELP skillswapify_process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE skillswapify_process_cpu_seconds_total counter
+skillswapify_process_cpu_seconds_total 0.034099
+
+# HELP skillswapify_process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE skillswapify_process_start_time_seconds gauge
+skillswapify_process_start_time_seconds 1792725286
+
+# HELP skillswapify_process_resident_memory_bytes Resident memory size in bytes.
+# TYPE skillswapify_process_resident_memory_bytes gauge
+skillswapify_process_resident_memory_bytes 83046400
+
+# HELP skillswapify_process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE skillswapify_process_virtual_memory_bytes gauge
+skillswapify_process_virtual_memory_bytes 1532428288
+
+# HELP skillswapify_process_heap_bytes Process heap size in bytes.
+# TYPE skillswapify_process_heap_bytes gauge
+skillswapify_process_heap_bytes 614993920
+
+# HELP skillswapify_process_open_fds Number of open file descriptors.
+# TYPE skillswapify_process_open_fds gauge
+skillswapify_process_open_fds 20
+
+# HELP skillswapify_process_max_fds Maximum number of open file descriptors.
+# TYPE skillswapify_process_max_fds gauge
+skillswapify_process_max_fds 4096
+
+# HELP skillswapify_nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE skillswapify_nodejs_eventloop_lag_seconds gauge
+skillswapify_nodejs_eventloop_lag_seconds 0
+
+# HELP skillswapify_nodejs_eventloop_lag_min_seconds The minimum recorded event loop delay.
+# TYPE skillswapify_nodejs_eventloop_lag_min_seconds gauge
+skillswapify_nodejs_eventloop_lag_min_seconds 0.009633792
+
+# HELP skillswapify_nodejs_eventloop_lag_max_seconds The maximum recorded event loop delay.
+# TYPE skillswapify_nodejs_eventloop_lag_max_seconds gauge
+skillswapify_nodejs_eventloop_lag_max_seconds 0.013221887
+
+# HELP skillswapify_nodejs_eventloop_lag_mean_seconds The mean of the recorded event loop delays.
+# TYPE skillswapify_nodejs_eventloop_lag_mean_seconds gauge
+skillswapify_nodejs_eventloop_lag_mean_seconds 0.010256809267759563
+
+# HELP skillswapify_nodejs_eventloop_lag_stddev_seconds The standard deviation of the recorded event loop delays.
+# TYPE skillswapify_nodejs_eventloop_lag_stddev_seconds gauge
+skillswapify_nodejs_eventloop_lag_stddev_seconds 0.0004832028909096036
+
+# HELP skillswapify_nodejs_eventloop_lag_p50_seconds The 50th percentile of the recorded event loop delays.
+# TYPE skillswapify_nodejs_eventloop_lag_p50_seconds gauge
+skillswapify_nodejs_eventloop_lag_p50_seconds 0.010100735
+
